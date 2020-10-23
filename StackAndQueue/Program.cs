@@ -15,6 +15,7 @@ namespace StackAndQueue
             stack.Enqueue(56);
             stack.Enqueue(30);
             stack.Enqueue(70);
+            stack.Dequeue();
             stack.DisplayQueue();
         }
     }

@@ -86,6 +86,18 @@ namespace StackAndQueue
             this.head = new_node;
             Console.WriteLine("Value inserted in the queue is: " + value);
         }
+        /// <summary>
+        /// UC 4
+        /// Delete elements from the queue.
+        /// </summary>
+        public void Dequeue()
+        {
+            if (this.head == null)
+                Console.WriteLine("The queue is empty");
+            Node temp = this.head;
+            this.head = this.head.next;
+            Console.WriteLine("Element deleted is {0} ", temp.data);
+        }
         public void DisplayQueue()
         {
             Node temp = this.head;
