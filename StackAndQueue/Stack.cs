@@ -72,5 +72,36 @@ namespace StackAndQueue
                 Pop();
             }
         }
+        public Node head;
+        /// <summary>
+        /// UC 3
+        /// Create queue and add data
+        /// </summary>
+        /// <param name="value">The value.</param>
+        public void Enqueue(int value)
+        {
+            Node new_node = new Node(value);
+            if (this.head != null)
+                new_node.next = this.head;
+            this.head = new_node;
+            Console.WriteLine("Value inserted in the queue is: " + value);
+        }
+        public void DisplayQueue()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Nothing to display, queue is empty");
+                return;
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    Console.Write(" " + temp.data);
+                    temp = temp.next;
+                }
+            }
+        }
     }
 }
